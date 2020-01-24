@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  offerista:
+    container_name: offerista-host
+    image: offerista-host
+    ports:
+      - "80:80"
+    tty: true
+    build:
+      context: offerista
+    networks:
+      - net
+networks:
+  net:
